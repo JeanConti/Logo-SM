@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(31, 31, 31);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    height: 400px;
+    width: 50vh;
+    display: grid;
+    place-items: center;
+    perspective: 500px;
+}
+
+.logo {
+    width: 300px;
+    height: 230px;
+    background: url(img/superman-3-logo-png-transparent.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 40px;
+    filter: drop-shadow(0px 7px 21px #ff0000);
+    animation: rotar 10s linear infinite;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+@keyframes rotar {
+    from{
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(-180deg);
+    }
+}
+
+.bottom-part {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    bottom: -94px;
+    background-color: #242424;
+    border-radius: 50px;
+    box-shadow: inset 0px 0px 10px 10px #11111136;
+    transform: rotateX(90deg);
+    display: grid;
+    place-items: center;
+    filter: drop-shadow();
+}
+
+.bottom-part::before {
+    content: "";
+    width: 16rem;
+    height: 16rem;
+    position: absolute;
+    bottom: 5rem;
+    background-color: #ff000059;
+    box-shadow: inset 0 0 10px 10px #11111136;
+    filter: blur(30px);
+}
